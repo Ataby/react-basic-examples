@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Events from "./components/Events";
 import Counter from './components/Counter';
+import UseStateCounter from './components/StateHooks';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Events/>
       <Counter/>
       <Counter count={2}/>
+      <UseStateCounter/>
     </div>
   );
 }

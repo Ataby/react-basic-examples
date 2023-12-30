@@ -57,9 +57,9 @@ import  { Component } from 'react'
   render() {
     return (
        //SAYACTA SAYILAN DEGERLERIN SUREKLI EKRANA BASILMASI LAZIM
-       <div className="container text-center mt-5 border border-5">
+       <div className="container text-center mt-2 border border-5">
             <h2>CLASSFULL COMPONENT</h2>
-            <h2 className ="display-2 text-danger">Count: {this.state.count} 
+            <h2 className ="display-4 text-danger">Count: {this.state.count} 
             <br/><span className='display-6'>  ({this.props.count || 0} ile başlayan sayaç)</span> </h2>
             <button   className="btn btn-success"
             onClick={this.increment}>increment</button> 

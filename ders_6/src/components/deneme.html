@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Example</title>
+</head>
+<body>
+
+    <label for="initialValue">Enter initial value: </label>
+    <input type="number" id="initialValue" />
+    <button onclick="setInitialValue()">Set Initial Value</button>
+
+    <p>Counter Value: <span id="counter"></span></p>
+    <button onclick="increaseCounter()">Increase</button>
+    <button onclick="decreaseCounter()">Decrease</button>
+
+    <script>
+        let counterValue = 0; // Default value
+
+        // Function to set the initial value based on user input
+        function setInitialValue() {
+            const initialValueInput = document.getElementById('initialValue');
+            const inputValue = parseInt(initialValueInput.value);
+
+            if (!isNaN(inputValue)) {
+                counterValue = inputValue;
+                updateCounter();
+            }
+        }
+
+        // Function to update the counter and display
+        function updateCounter() {
+            document.getElementById('counter').innerText = counterValue;
+        }
+
+        // Function to increase the counter
+        function increaseCounter() {
+            counterValue++;
+            updateCounter();
+        }
+
+        // Function to decrease the counter
+        function decreaseCounter() {
+            counterValue--;
+            updateCounter();
+        }
+
+        // Set the initial counter value on page load
+        window.onload = updateCounter;
+    </script>
+
+</body>
+</html>
