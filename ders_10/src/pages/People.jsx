@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-// USE ILE BASLAYANLAR HOOK'TUR. NAVIGATE HOOK'U BIR FONK. ICINDE CAGRILABILIR. AMA BIR RETURN ICERISINDE COMPONENT GIBI CAGRILMAZ
+// USE ILE BASLAYANLAR HOOK'TUR. NAVIGATE HOOK'U BIR FONK. ICINDE CAGRILABILIR. AMA BIR RETURN ICERISINDE COMPONENT GIBI CAGRILMAZ.
+//OZEL HOOK YAZILABILIR.
+//NAVIGATE => DYNAMIC ROUTE OLUSTURMAK IICN KULLANILIR.
+//LINK.TO ELEMENTI ISE STATIK YONLENDIRMELER ICIN KULLANILIR.
 
 const People = () => {
   const [people, setPeople] = useState([]);
@@ -26,12 +29,17 @@ const People = () => {
           return (
             <div
               key={id}
-              className=" col-sm-12 col-md-6 col-lg-4"
-              type="button" onClick={()=>navigate(`/people/${id}`)}
-              // type="button" onClick={()=>navigate(`/people/${id}`,{state:person})}
+              className=" col-sm-12 col-md-6 col-lg-4" type="button"
+              //ABSOLUTE PATH
+              // onClick={()=>navigate(`/people/${id}`)}
+
+              //RELATIVE PATH
+               onClick={()=>navigate(`${id}`)}
+
+              // onClick={()=>navigate(`/people/${id}`,{state:person})}
               //NAVIGATE HOOK'U ILE OBJECT DE GONDEREBILIYORUZ. 'PERSON' OBJESINI TEKRAR FETCH ETMEYE GEREK YOK, ZAMAN KAYBI.
             >
-              <img className="rounded" src={avatar} alt="img" />
+              <img className="rounded-2" src={avatar} alt="img" />
               <h6>
                 {first_name} {last_name}
               </h6>
