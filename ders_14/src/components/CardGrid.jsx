@@ -23,7 +23,7 @@ export default function CardGrid () {
                 <Grid item xs={12} sm={6} md={4}>
                     <Card key={id} >
         <CardMedia
-            sx={{ height: 540 }}
+            sx={{ height: 440 }}
             image={img}
             title="green iguana" 
         />
