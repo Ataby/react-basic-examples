@@ -17,6 +17,7 @@ function App() {
           //SUSLU PARANTEZDEN SONRA ILK IS RETURN EKLEMEK
           //DATA ICINDE ID YOKSA INDEX'LEME KULLANILABILIR.
           <Card key={id} language={language} id={id} img={img} btn={btnName} />
+          // FARKLI TURDE PROP'LAR GONDERILEBILIR.
         );
       })}
     </>
