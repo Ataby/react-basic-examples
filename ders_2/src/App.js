@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/header'; //DEFAULT EXPORT ISTENILEN KELIME ILE CAGRILIR.
+import Header from './components/header'; //DEFAULT EXPORT PARANTEZ OLMADAN KELIME ILE CAGRILIR.
 //import {Header} from './components/header'; //SADE EXPORT
 import Footer from './components/footer';
 import Content from './components/contents';
