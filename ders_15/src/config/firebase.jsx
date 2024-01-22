@@ -15,7 +15,7 @@ const firebaseConfig = {
 
  const initApp= initializeApp(firebaseConfig);
   getAnalytics(initApp);
-  const auth = getAuth(initApp); 
+ export const auth = getAuth(initApp); 
 
   export const signIn = async function(email,passw){
     await signInWithEmailAndPassword(auth,email,passw);
