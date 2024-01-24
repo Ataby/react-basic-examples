@@ -18,18 +18,21 @@ const UseReducer = () => {
     const url = "https://api.thecatapi.com/v1/images/search";
     // setLoading(true); = BUNUN YERINE ARTIK 'dispatch' KULLANACAGIZ.
     dispatch({type:"start"});
-
+    //REDUCER'A 'action' GONDERMIS OLUYORUZ.
+    
     try {
       const res = await fetch(url);
       const data = await res.json();
-    // setCatImage(data[0].url);
-    // setError("");
-        dispatch({type:"success",payload:data[0].url});
-
+      // setCatImage(data[0].url);
+      // setError("");
+      dispatch({type:"success",payload:data[0].url});
+      //REDUCER'A 'action' GONDERMIS OLUYORUZ.
+      
     } catch (error) {
-    //  setError("DATA CAN NOT BE FETCHED");
-    //  setCatImage("");
-        dispatch({type:"fail",payload:"DATA CAN NOT BE FETCHED"});
+      //  setError("DATA CAN NOT BE FETCHED");
+      //  setCatImage("");
+      dispatch({type:"fail",payload:"DATA CAN NOT BE FETCHED"});
+      //REDUCER'A 'action' GONDERMIS OLUYORUZ.
       console.log(error);
 
     } finally { // TRY.CATCH NASIL BITERSE BITSIN FINALLY BLOGUNA GIRER.
