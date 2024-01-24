@@ -1,27 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-import  {useRef,useEffect} from "react"
+import "./App.css";
+import Counter from "./components/counter/Counter";
+// import Todo from "./components/todo/Todo";
+import {createStore} from "redux"
+import reducer from "./redux/reducer";
+import {Provider} from "react-redux";
+import counterReducer, { initialState } from "./redux/reducer";
 
 function App() {
-  const inputRef= useRef( );
-  const divRef = useRef();
+  //REDUX : GLOBAL STATE YONETIM KUTUPHANESIDIR. GLOBAL STATE SAYISI FAZLA OLACAK ISE USE.CONTEXT YERINE REDUX DAHA MANTIKLI
 
-  useEffect(() => {
-    console.log(inputRef)
-    //DOM'DAKI TUM ELEMENTLERE ULASMAK ICIN KULLANILIR.
-     
-  }, [ ])
+const store = createStore(counterReducer);
+//1- Create aşaması 'context'teki gibi  
 
-  const onFocus = function(){inputRef.current.focus();}
-  const drawBorder = function(){divRef.current.style.border="2px solid red"} 
-  
   return (
-    <div className="App" ref={divRef}>
-        <h2>React Course_19</h2>
-        <input ref={inputRef} />
-        <button onClick={onFocus} >Input Focus </button>
-        <button onClick={drawBorder} >Draw Border</button>
-
+    <div className="app">
+      <Provider store={store} > {/* 2- Sarmalama aşaması(Providing)  */}
+      <Counter />
+      {/* <Todo /> */}
+      </Provider>
     </div>
   );
 }
