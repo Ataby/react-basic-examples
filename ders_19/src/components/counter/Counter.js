@@ -1,6 +1,6 @@
 import "./Counter.css";
 import {useDispatch,useSelector} from "react-redux"
-import reducer from "../../redux/reducer";
+import reducer from "../../redux/counterReducer";
 
 const Counter = () => {
 
