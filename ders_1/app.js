@@ -4,7 +4,7 @@
 // FACEBOOK, COK DINAMIK VE AKISKAN VERI SAYFASIYLA UGRASTIGI ICIN SAYFAYI SUREKLI RENDER ILE YORMAMAK ADINA REACT KUTUPHANESINI GELISTIRMIS.
 // YANI REACT'IN TEMEL MANTIGI GEREKSIZ RENDER'LARI AZALTMAKTIR.
 // KENDINE GORE HTML CSS JS DOSYASI OLAN BIR BLOCK'A COMPONENT YAPISI DENIR. ORNEK: HER BIR TWEET ICINDE ACIKLAMA, RESIM, LINK BOLUMLERI OLUYOR VE HER TWEET'TE BU BLOCK KULLANILIYOR.
-//INTERVIEW => CLOSURE NEDIR => Bir üst fonksiyonda tanımlanan değişkenlerimizi değerini kaybetmeden, iç fonksiyonlarımız da da kullanabilmektir.
+//INTERVIEW => CLOSURE NEDIR => Bir üst fonksiyonda tanımlanan değişkenlerimizi değerini kaybetmeden, iç fonksiyonlarımız da da kullanabilmektir.Çünkü javascript’te fonksiyon bittiği an içerisinde ki değişkenler “GC(Garbage Collector)” tarafından silinir.
 //MVC KATMANLARI(Model, View, Controller)
 //MODEL(DATABASE) VE CONTROLLER KATMANI => BACKEND => API VE GONDERILEN ISTEKLER, BACKEND KSIIMLARI VS.
 //VIEW(UI => REACT) KATMANI =>FRONTEND
