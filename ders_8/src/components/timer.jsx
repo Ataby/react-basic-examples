@@ -15,7 +15,7 @@ class Timer extends Component {
   }
   componentDidUpdate(prevProps, prevState) {
     //PREV.PROPS VE PREV.STATE PARAMETRE OLARAK GIRILMELIDIR
-    // if (prevState.time === 1) {
+    // if (prevState.time === 1){
     if (this.state.time === 0) {
       clearInterval(this.intervalId);
     }
