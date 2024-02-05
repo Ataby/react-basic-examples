@@ -1,5 +1,7 @@
 const Person=function(props){
     const {name,tlf, img}=props;
+    //GONDERILEN PROPLAR, DESTRUCTURE EDILDI.
+
     return (
         
         <div style={{textAlign:"center"}}>
