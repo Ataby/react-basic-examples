@@ -1,5 +1,5 @@
 import ButonStyle from "./Buton.module.css";
-//JS VEYA JSX DOSYASI HARICINDEKILERIN UZANTILARI EKLENMELI
+//JS VEYA JSX DOSYASI HARICINDEKI DOSYALARIN UZANTILARI EKLENMELI
 
 const Buton = ({ tus }) => {
   console.log(tus);
