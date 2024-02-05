@@ -49,6 +49,7 @@ const UseStateCounter = () => {
     const incAge=()=>{
         // setPerson(person.age+1)
         //BU SEKILDE BIR ATAMA ILE SAYISAL DEGER, STATE'IN UZERINE YAZILMIS OLUR.
+
         setPerson({name:"John", surname:"Doen", age: 44 });
         // setPerson({ ...person, age: person.age + 1});
         //IKI IFADE DE DOGRUDUR.
@@ -70,7 +71,7 @@ const UseStateCounter = () => {
             <button onClick={incAge} className="btn btn-success">increment</button>
         </div>
     </div>
-  )
+    )
   }
 
   export default UseStateCounter;
