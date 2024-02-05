@@ -39,50 +39,47 @@ const Form = () => {
       <form onSubmit={handleSubmit}>
         <h1 className="display-5 text-danger">FORMS</h1>
         <div className="mb-3">
-    <label htmlFor="userName" className="form-label">
-      Username <span>"{username}"</span>
-    </label>
-    <input
-      type="text"
-      className="form-control"
-      id="userName"
-      aria-describedby="emailHelp"
-      onChange={handleUsername}
-      value={username}
-    />
-    
-  </div>
-      <div className="mb-3">
-    <label htmlFor="email" className="form-label">
-      Email address
-    </label>
-    <input
-      type="email"
-      className="form-control"
-      id="email"
-      aria-describedby="emailHelp"
-      value={email}
-      onChange={(e)=>setEmail(e.target.value)}
-    />
-    
-  </div>
-  <div className="mb-3">
-    <label htmlFor="password" className="form-label">
-      Password
-    </label>
-    <input
-      type="password"
-      className="form-control"
-      id="password"
-      value={password}
-      onChange={(e)=>setPass(e.target.value)}
-    />
-  </div>
+          <label htmlFor="userName" className="form-label">
+          Username <span>"{username}"</span>
+          </label>
+          <input
+          type="text"
+          className="form-control"
+          id="userName"
+          aria-describedby="emailHelp"
+          onChange={handleUsername}
+          value={username}/>    
+        </div>
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">
+          Email address
+          </label>
+          <input
+          type="email"
+          className="form-control"
+          id="email"
+          aria-describedby="emailHelp"
+          value={email}
+          onChange={(e)=>setEmail(e.target.value)}/>    
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">
+            Password
+          </label>
+          <input
+            type="password"
+            className="form-control"
+            id="password"
+            value={password}
+            onChange={(e)=>setPass(e.target.value)}
+          />
+        </div>
   
-  <button type="submit" className="btn btn-primary">
-    Submit
-  </button>
-</form>
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
+      </form>
 
   );
 };
