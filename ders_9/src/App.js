@@ -7,6 +7,8 @@ import NotFound from "./pages/NotFound";
 import {BrowserRouter,Route,Routes} from "react-router-dom";
 
 function App() {
+
+  //BrowserRouter bileşeni, tarayıcı tabanlı gezinme işlemlerini destekler. BrowserRouter, uygulamanızın URL'sini takip eder ve URL'deki değişikliklere tepki vererek ilgili bileşenleri render eder.
   return (
     <BrowserRouter>
       <Nav />
