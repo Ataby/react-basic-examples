@@ -12,7 +12,7 @@ const StyledLink = styled.a`
     background-color: lightblue;
     padding: .3rem;
     color: crimson;
-    //'SECONDARY' ICEREN COMPONENTLERE BU OZELLIK SAYESINDE TOPLU OLARAK STYLING VEREBILIRIZ.
+    //'SECONDARY' PROP'U ICEREN COMPONENTLERE (BU OZELLIK SAYESINDE) TOPLU OLARAK STYLING VEREBILIRIZ.
     `
   }
 `;
