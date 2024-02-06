@@ -1,12 +1,18 @@
 //?===============================================
 //?                USEEFFECT HOOK
 //?===============================================
-//! UseEffect Hook'u fonksiyonel componenler'te yan etkileri
-//! (side effect) gerceklestirmek icin kullanilir.
-//! componentDidMount,componentDidUpdate,ve componentWillUnmount
-//! metotlarinin bir birlesimi gibi dusunulebilir.
+//! UseEffect Hook'u fonksiyonel componenler'te yan etkileri (side effect) gerceklestirmek icin kullanilir.
+//! componentDidMount,componentDidUpdate,ve componentWillUnmount metotlarinin bir birlesimi gibi dusunulebilir.
+
 //HOOK ICIN GECERLI KURALLARIN HEPSI USE.EFFECT ICIN DE GECERLIDIR.
 //PERFORMANCE BASED CODE ICIN STATE'LERI GEREKLI YERLERDE KULLANMAK GEREKIR.
+
+//useEffect, bileşenin monte edilmesi (ilk render), güncellenmesi ve kaldırılması gibi durumları kapsar. (CHAT GPT)
+//Bağımlılık dizisi içinde belirtilen değerler değiştikçe useEffect çalışır. Boş bağımlılık dizisi, sadece bileşen monte edildiğinde çalışmasını sağlar.
+
+//useEffect fonksiyonu, asenkron işlemleri yönetmek ve React component'in yaşam döngüsü ile ilişkilendirilmiş yan etkilere tepki vermek için tasarlanmıştır. Bu nedenle, bu hook içinde uzun süren senkron işlemler veya döngülerden kaçınılmalıdır. ORN:while döngusu (CHAT GPT)
+
+//Eğer bir döngü içinde asenkron işlemleri yapmanız gerekiyorsa, genellikle setInterval veya setTimeout gibi asenkron işlemlerin kullanılması önerilir. Bu işlemler, React'in bileşenin arayüzüne erişmesine izin verir ve uygulamanızın kullanıcı arayüzünün daha akıcı olmasını sağlar.(CHAT GPT)
 
 import { useState, useEffect } from "react";
 
