@@ -1,36 +1,28 @@
 import { useReducer, useState } from "react";
 import { initialState, reducer } from "./reducer";
 
-const UseReducer = () => {
-//   const [catImage, setCatImage] = useState("");
-//   const [error, setError] = useState("");
-//   const [loading, setLoading] = useState(false);
-  //LOCAL STATE'LER ARTTIKCA BUNLARI AZALTMAYA YARAYAN HOOK, REDUCER HOOK'UDUR.
+// REDUCER'IN MANTIGI : BIR COK DEGISEN STATE'I TEK BIR ACTION HALINDE TANIMLAYARAK, BU ACTION ICINDE STATE'LERI YUKLEMEK.
 
+const UseReducer = () => {
+  //'state' = REDUCER FONKSIYONUNDAKI YAZDIGIMIZ STATE'LERIN TUMU (catImage,error,loading OBJECT FORMATINDA)
+  //'dispatch' = DEGISTIRICI FONKSIYONLAR 
   const [state,dispatch] = useReducer(reducer,initialState);
-  //ILK DONDURULEN 'state' = REDUCE FONKSIYONUNDAKI YAZDIGIMIZ STATE'LERIN TAMAMI(OBJECT FORMATINDA)
-  //IKINCI DONDURULEN 'dispatch' = DEGISTIRICI FONKSIYONLAR 
 
   const {loading,error,catImage}=state;
-  // ASAGIDA DOM'DA BUNLARI BASMAK ICIN DESTRUCTURE
-
+  // ASAGIDA DOM'DA BUNLARI BASMAK ICIN DESTRUCTURE ETTIK
+ 
   const getCatImage = async () => {
     const url = "https://api.thecatapi.com/v1/images/search";
-    // setLoading(true); = BUNUN YERINE ARTIK 'dispatch' KULLANACAGIZ.
     dispatch({type:"start"});
     //REDUCER'A 'action' GONDERMIS OLUYORUZ.
     
     try {
       const res = await fetch(url);
       const data = await res.json();
-      // setCatImage(data[0].url);
-      // setError("");
       dispatch({type:"success",payload:data[0].url});
       //REDUCER'A 'action' GONDERMIS OLUYORUZ.
       
     } catch (error) {
-      //  setError("DATA CAN NOT BE FETCHED");
-      //  setCatImage("");
       dispatch({type:"fail",payload:"DATA CAN NOT BE FETCHED"});
       //REDUCER'A 'action' GONDERMIS OLUYORUZ.
       console.log(error);
@@ -39,8 +31,6 @@ const UseReducer = () => {
     //   setLoading(false);
     }
   };
-  console.log(error);
-  console.log(catImage);
 
   return (
     <div>
