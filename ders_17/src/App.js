@@ -36,6 +36,15 @@ function App() {
   // }) 
   //USE.MEMO KULLANMADAN ONCEKI HALI BU
 
+  const List = ({ list }) => {
+    return (
+      <ul>
+        {list.map((item) => (
+           <li key={item.id} >{item.name}  </li>
+        ))}
+      </ul>
+    );
+  };
   return (
     <div className="App">
       <input type='text' onChange={handleText}/>
@@ -44,15 +53,6 @@ function App() {
     </div>
   );
 }
-const List = ({ list }) => {
-  return (
-    <ul>
-      {list.map((item) => (
-         <li key={item.id} >{item.name}  </li>
-      ))}
-    </ul>
-  );
-};
 
  
 
