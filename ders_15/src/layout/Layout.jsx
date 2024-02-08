@@ -8,7 +8,6 @@ const Layout = () => {
   const isLogged = useLogged();
   console.log(isLogged);
    
-  
     return (
     <div>
         {!isLogged && ( <h1> Loading...</h1>)}
