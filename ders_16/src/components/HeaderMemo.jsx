@@ -12,6 +12,7 @@ const HeaderMemo = () => {
   const factMemo = useMemo(()=>{
     return factFunc(val);
   },[val]);
+  // ONCEKI DEGERLERIN FAKTORIYEL SONUCLARI TEKRAR HESAPLANMASIN DIYE "USE.MEMO" KULLANDIK. 
 
   return (
     <div className='bg-danger text-center'>HeaderMemo Componenti sayesinde tekrar hesaplanmadı. | Sonuc: {factMemo} 
