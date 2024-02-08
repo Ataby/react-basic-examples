@@ -18,7 +18,14 @@ function Main() {
   const [cart,setcart] = useState([]);
 
   const addtoCart = useCallback((product)=>{
-    setcart ((cart)=> [...cart,product])},[])
+    setcart ((cart)=> {
+      const eklenen = [...cart,product] ;
+      console.log(eklenen);
+      return [...cart,product] ;
+    });
+      },[])
+
+
 //USE.CALLBACK ((item)=> {function},[dependency array])
 
 //   const addtoCart = useCallback(function(product){

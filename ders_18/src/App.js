@@ -10,6 +10,9 @@ function App (){
 
   //Kısacası, useMemo genellikle bir değeri hesaplamak ve bellekte saklamak için kullanılırken, memo bir bileşeni memoize etmek ve gereksiz render işlemlerini önlemek için kullanılır.
 
+  //useMemo: Hesaplanmış değeri döndürür.
+  //memo: Bileşeni sarmalayan bir yüksek düzey bileşen döndürür.
+
   //ANLADIGIM: USE.MEMO FONKSIYONUN PARAMETRESI DEGISMEDIGI ZAMANLARDA KULLANILIYOR. MEMO ISE AYNI SEYI TEKRAR RENDER ETMEMESI ICIN KULLANILIYOR.
   return (
     <>
