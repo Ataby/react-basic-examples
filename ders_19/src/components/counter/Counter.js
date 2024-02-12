@@ -4,6 +4,9 @@ import reducer from "../../redux/counterReducer";
 
 const Counter = () => {
 
+  //DISPATCH HOOK'U, USE.NAVIGATE GIBI TANIMLANARAK KULLANILIR. 
+  //"SEVK ETMEK" ANLAMINA GELDIGI ICIN REDUCER HOOK'UNDAKI SWITCH CASE YAPISINA SEVK EDER.
+
   const dispatch=useDispatch();
   const counter=useSelector((state)=> state.counter)
 
